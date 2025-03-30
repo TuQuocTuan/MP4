@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins',sans-serif;
+    box-sizing: border-box;
+}
+
+#container{
+    width: 100%;
+    height: 100vh;
+    
+    background:linear-gradient(to top,white,rgb(247, 145, 162) 70%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.musicplayer{
+    background-color: pink;
+    width: 400px;
+    padding: 25px 35px;
+    text-align: center;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+nav .circle{
+    border-radius:50%;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #fff;
+    color: #f53192;
+    box-shadow: 0px 5px 10px rgba(255, 26, 26, 0.22);
+}
+
+.tgian   {
+    display: flex;
+    justify-content: space-between;
+}
+.button .backward,.next,.resume{
+    cursor: pointer;
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 0 15px;
+    justify-content: center;
+    position: relative;
+    top: 5px;
+}
+.button{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    right: 3px;
+}
+.line{
+    width: 100%;
+    height:5px;
+    margin-top: 5px;
+    
+    background-color: rgb(202, 202, 202);
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.linechild{
+    cursor: pointer;
+    position:absolute;
+    border-radius: 10px;
+    background-color: white;
+    width: 50%;
+    height: 100%;
+}
+
+#progress{
+    -webkit-appearance: none ;
+    width: 100%;
+    height: 6px;
+    background-color: #f53192;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 40px 0;
+}
+#progress::-webkit-slider-thumb{
+    -webkit-appearance: none ;
+    background-color: #f53192;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border:8px solid white;
+}
+.controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.controls div{
+    width: 60px;
+    height: 60px;
+    margin: 20px;
+    background-color: white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center ;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 0px 5px 20px rgba(255, 26, 26, 0.22);
+    cursor: pointer;
+}
+
+
+.round{
+    animation: round 4s linear infinite;
+}
+
+@keyframes round {
+    0%{
+        transform: rotateZ(0deg);
+    }
+    100%{
+        transform: rotateZ(360deg);
+    }
+}
+
+.run{
+    animation: run 6s linear infinite;
+}
+
+@keyframes run {
+   0%{
+    transform: translateX(100%);
+   } 
+   100%{
+    transform: translateX(-100%);
+   }
+}
